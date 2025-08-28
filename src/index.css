@@ -1,0 +1,131 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 220 23% 95%;
+  --foreground: 220 9% 10%;
+  
+  --card: 0 0% 100%;
+  --card-foreground: 220 9% 10%;
+  
+  --popover: 0 0% 100%;
+  --popover-foreground: 220 9% 10%;
+  
+  --primary: 220 70% 50%;
+  --primary-foreground: 0 0% 98%;
+  
+  --secondary: 220 14% 96%;
+  --secondary-foreground: 220 9% 10%;
+  
+  --muted: 220 14% 96%;
+  --muted-foreground: 220 9% 46%;
+  
+  --accent: 220 14% 96%;
+  --accent-foreground: 220 9% 10%;
+  
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 0 0% 98%;
+  
+  --border: 220 13% 91%;
+  --input: 220 13% 91%;
+  --ring: 220 70% 50%;
+  
+  --radius: 0.5rem;
+  
+  /* Custom vocabulary app colors */
+  --vocabulary-blue: 220 70% 50%;
+  --vocabulary-blue-light: 220 70% 60%;
+  --vocabulary-gray: 220 9% 46%;
+  --vocabulary-gray-light: 220 14% 96%;
+  --vocabulary-success: 142 76% 36%;
+  --vocabulary-warning: 38 92% 50%;
+}
+
+.dark {
+  --background: 220 27% 8%;
+  --foreground: 0 0% 95%;
+  
+  --card: 220 27% 12%;
+  --card-foreground: 0 0% 95%;
+  
+  --popover: 220 27% 12%;
+  --popover-foreground: 0 0% 95%;
+  
+  --primary: 220 70% 50%;
+  --primary-foreground: 0 0% 98%;
+  
+  --secondary: 220 27% 16%;
+  --secondary-foreground: 0 0% 95%;
+  
+  --muted: 220 27% 16%;
+  --muted-foreground: 0 0% 65%;
+  
+  --accent: 220 27% 16%;
+  --accent-foreground: 0 0% 95%;
+  
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 0 0% 98%;
+  
+  --border: 220 27% 18%;
+  --input: 220 27% 18%;
+  --ring: 220 70% 50%;
+}
+
+* {
+  border-color: hsl(var(--border));
+}
+
+body {
+  color: hsl(var(--foreground));
+  background: hsl(var(--background));
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  padding: 0;
+}
+
+.vocabulary-card {
+  background: hsl(var(--card));
+  border: 1px solid hsl(var(--border));
+  border-radius: var(--radius);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.vocabulary-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.vocabulary-button {
+  background: hsl(var(--vocabulary-blue));
+  color: hsl(var(--primary-foreground));
+  border: none;
+  border-radius: var(--radius);
+  padding: 0.75rem 1.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.vocabulary-button:hover {
+  background: hsl(var(--vocabulary-blue-light));
+}
+
+.vocabulary-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.vocabulary-button-secondary {
+  background: hsl(var(--vocabulary-gray-light));
+  color: hsl(var(--vocabulary-gray));
+  border: 1px solid hsl(var(--border));
+}
+
+.vocabulary-button-secondary:hover {
+  background: hsl(var(--muted));
+}
